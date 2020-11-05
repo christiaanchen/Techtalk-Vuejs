@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Presentacion Vue</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="nav-bar"></div>
+
+      <div class="cart">Carrito({{carrito.length}})</div>
+      <product-display @add-to-cart="updateCart"></product-display>
+    </div>
+
+    <!-- Import App -->
+    <script src="./main.js"></script>
+
+    <!-- Import Componente -->
+    <script src="./componentes/productos.js"></script>
+
+    <!-- Mount App -->
+    <script>
+      const mountedApp = app.mount("#app");
+    </script>
+  </body>
+</html>
